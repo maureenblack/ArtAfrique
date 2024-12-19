@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import axios, { InternalAxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
 declare global {
   namespace NodeJS {
@@ -16,10 +16,10 @@ export const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-});
+} as AxiosRequestConfig);
 
 // Add request interceptor for authentication
-api.interceptors.request.use((config: InternalAxiosRequestConfig) => {
+api.interceptors.request.use((config: AxiosRequestConfig) => {
   const token = localStorage.getItem('token');
   if (token && config.headers) {
     config.headers.Authorization = `Bearer ${token}`;

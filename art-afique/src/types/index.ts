@@ -13,8 +13,8 @@ export interface Artist {
     facebook?: string;
   };
   artworks?: Artwork[];
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;  // ISO date string
+  updatedAt: string;  // ISO date string
 }
 
 export interface Artwork {
@@ -35,8 +35,8 @@ export interface Artwork {
   category: string;
   status: 'available' | 'sold' | 'reserved';
   tags?: string[];
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;  // ISO date string
+  updatedAt: string;  // ISO date string
 }
 
 export interface User {
@@ -45,8 +45,8 @@ export interface User {
   name: string;
   role: 'admin' | 'artist' | 'customer';
   profileImage?: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;  // ISO date string
+  updatedAt: string;  // ISO date string
 }
 
 export interface Order {
@@ -62,6 +62,6 @@ export interface Order {
     country: string;
     postalCode: string;
   };
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;  // ISO date string
+  updatedAt: string;  // ISO date string
 }
