@@ -1,4 +1,4 @@
-# Art Afique 🎨
+# Art Afrique 🎨
 
 An online platform celebrating African art and artists - where creativity meets culture.
 
